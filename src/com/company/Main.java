@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-       //a. Inicializar un objeto Rectángulo estableciendo ancho y alto.
+       /*//a. Inicializar un objeto Rectángulo estableciendo ancho y alto.
 
        Rectangulo rectangulo1 = new Rectangulo(6.1f,3.7f);
 
@@ -32,11 +32,32 @@ public class Main {
 
        Rectangulo otroRectangulo = new Rectangulo();
 
-       System.out.println("\nEl  alto es " + otroRectangulo.getAlto() + "\nEl ancho es: " + otroRectangulo.getAncho());
+       System.out.println("\nEl  alto es " + otroRectangulo.getAlto() + "\nEl ancho es: " + otroRectangulo.getAncho());*/
 
         //******************************************************************************************
 
+        //a. Inicialice un empleado Carlos Gutiérrez, con dni 23456345 y salario inicial de
+        //25000.
 
+        Empleado empleado1 = new Empleado(23456345,"Carlos","Gutiérrez",25000);
 
+        //b. Inicialice un empleado Ana Sánchez, con dni 34234123 y salario inicial de
+        //27500.
+
+        Empleado empleado2 = new Empleado(34234123,"Ana", "Sánchez",27500);
+
+        //c. Imprima ambos objetos por pantalla
+
+        Empleado.mostrarEmpleado(empleado1);
+        Empleado.mostrarEmpleado(empleado2);
+
+        //d. Aumente el salario del empleado Carlos en un 15% e imprima en pantalla el
+        //salario anual del mismo.
+
+        empleado1.setSalario(empleado1.aumentarSalario(empleado1.getSalario(),15));
+
+        Empleado.mostrarEmpleado(empleado1);
     }
+
+
 }
