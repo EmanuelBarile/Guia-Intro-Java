@@ -1,0 +1,26 @@
+@startuml
+
+
+class Rectangulo {
+      -float : ancho=1,0
+      -float : alto=1,0
+    }
+
+Rectangulo : +Rectangulo()
+
+Rectangulo : +calcularArea()
+Rectangulo : +calcularPerimetro()
+
+Rectangulo : +getAncho()
+Rectangulo : +getAlto()
+Rectangulo : +setAlto()
+Rectangulo : +setAncho()
+
+skinparam class {
+BackgroundColor gainsboro
+ArrowColor steelblue
+BorderColor skyblue
+}
+skinparam stereotypeCBackgroundColor YellowGreen
+
+@enduml
