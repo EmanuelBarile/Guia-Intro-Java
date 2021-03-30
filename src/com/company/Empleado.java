@@ -67,7 +67,7 @@ public class Empleado {
 
     }
 
-    public static void mostrarEmpleado (Empleado empleado){
+        public  void mostrarEmpleado (Empleado empleado){
 
         System.out.print("Empleado [dni="+ empleado.getDni());
         System.out.print("\t\tnombre= "+ empleado.getNombre() +"\t\tapellido= "+ empleado.getApellido());

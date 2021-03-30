@@ -1,6 +1,6 @@
 package com.company;
 
-public class Main {
+public class Main<mostrarItem> {
 
     public static void main(String[] args) {
        /*//a. Inicializar un objeto Rectángulo estableciendo ancho y alto.
@@ -36,7 +36,7 @@ public class Main {
 
         //******************************************************************************************
 
-        //a. Inicialice un empleado Carlos Gutiérrez, con dni 23456345 y salario inicial de
+        /*//a. Inicialice un empleado Carlos Gutiérrez, con dni 23456345 y salario inicial de
         //25000.
 
         Empleado empleado1 = new Empleado(23456345,"Carlos","Gutiérrez",25000);
@@ -48,16 +48,25 @@ public class Main {
 
         //c. Imprima ambos objetos por pantalla
 
-        Empleado.mostrarEmpleado(empleado1);
-        Empleado.mostrarEmpleado(empleado2);
+        empleado1.mostrarEmpleado(empleado1);
+        empleado2.mostrarEmpleado(empleado2);
 
         //d. Aumente el salario del empleado Carlos en un 15% e imprima en pantalla el
         //salario anual del mismo.
 
         empleado1.setSalario(empleado1.aumentarSalario(empleado1.getSalario(),15));
 
-        Empleado.mostrarEmpleado(empleado1);
+        empleado1.mostrarEmpleado(empleado1);*/
     }
 
+    //***************************************************************************
+
+        //a. Inicialice el objeto con los atributos necesarios
+
+        ItemDeVenta alfajor = new ItemDeVenta(606,"mousse",12,18);
+
+        //b. Imprima por pantalla el objeto inicializado.
+
+        alfajor.mostrarItem(alfajor); // NO FUNCIONA , REVISAR
 
 }
