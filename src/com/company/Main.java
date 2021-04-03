@@ -1,6 +1,6 @@
 package com.company;
 
-public class Main<mostrarItem> {
+public class Main{
 
     public static void main(String[] args) {
        /*//a. Inicializar un objeto Rectángulo estableciendo ancho y alto.
@@ -63,10 +63,18 @@ public class Main<mostrarItem> {
 
         //a. Inicialice el objeto con los atributos necesarios
 
-        ItemDeVenta alfajor = new ItemDeVenta(606,"mousse",12,18);
+        //ItemDeVenta alfajor = new ItemDeVenta(606,"mousse",12,18);
 
         //b. Imprima por pantalla el objeto inicializado.
 
-        alfajor.mostrarItem(alfajor); // NO FUNCIONA , REVISAR
+        //alfajor.mostrarItem(alfajor); // NO FUNCIONA , REVISAR
+
+    //*****************************************************************************
+
+    //1. Inicialice una cuenta con un monto inicial de 15000.
+
+    
+
+
 
 }

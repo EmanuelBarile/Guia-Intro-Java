@@ -69,10 +69,7 @@ public class Empleado {
 
         public  void mostrarEmpleado (Empleado empleado){
 
-        System.out.print("Empleado [dni="+ empleado.getDni());
-        System.out.print("\t\tnombre= "+ empleado.getNombre() +"\t\tapellido= "+ empleado.getApellido());
-        System.out.print("\t\tsalario=  " + empleado.getSalario());
-        System.out.print("]\n");
+        System.out.println("Empleado[DNI: "+this.getDni()+"  Nombre: "+this.getNombre()+"   Apellido: "+this.getApellido()+"  Salario: "+this.getSalario()+"]");
     }
 
 
