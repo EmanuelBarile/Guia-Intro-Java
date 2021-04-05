@@ -30,12 +30,7 @@ public class ItemDeVenta {
 
         public void mostrarItem(ItemDeVenta item){
 
-        System.out.print("ItemVenta[id="+item.identificador);
-        System.out.print("\t\tdescripción="+item.descripcion);
-        System.out.println("\t\tcantidad="+item.cantidad);
-        System.out.println("\t\tpUnitario="+item.precioUnitario);
-        System.out.println("\t\tPtotal="+item.precioTotal(item.cantidad,item.precioUnitario));
-        System.out.print("]\n");
+        System.out.print("ItemVenta[id="+this.identificador+ "\t\tdescripción="+item.descripcion+"\t\tcantidad="+item.cantidad+"\t\tpUnitario="+item.precioUnitario+"\t\tPtotal="+item.precioTotal(item.cantidad,item.precioUnitario ));
 
     }
 

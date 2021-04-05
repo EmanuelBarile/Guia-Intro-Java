@@ -1,3 +1,4 @@
+package com.company;
 public class CuentaBanco {
 
     private int identificador;

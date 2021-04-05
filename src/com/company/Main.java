@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.CuentaBanco;
+
 public class Main{
 
     public static void main(String[] args) {
@@ -57,24 +59,40 @@ public class Main{
         empleado1.setSalario(empleado1.aumentarSalario(empleado1.getSalario(),15));
 
         empleado1.mostrarEmpleado(empleado1);*/
-    }
+
 
     //***************************************************************************
 
-        //a. Inicialice el objeto con los atributos necesarios
+        /*//a. Inicialice el objeto con los atributos necesarios
 
-        //ItemDeVenta alfajor = new ItemDeVenta(606,"mousse",12,18);
+        ItemDeVenta alfajor = new ItemDeVenta(606,"mousse",12,18);
 
         //b. Imprima por pantalla el objeto inicializado.
 
-        //alfajor.mostrarItem(alfajor); // NO FUNCIONA , REVISAR
+        alfajor.mostrarItem(alfajor); */
 
     //*****************************************************************************
 
     //1. Inicialice una cuenta con un monto inicial de 15000.
 
-    
+        CuentaBanco cliente1 = new CuentaBanco(001,"Raul","Rosales",15000);
+
+    //2. Realice una operación de crédito de 2500.
+
+        cliente1.credito(2500,cliente1);
+
+    //3. Realice una operación de compra de 1500.
+
+        cliente1.debito(1500,cliente1);
+
+    //4. Realice una operación de compra de 30000.
+
+        cliente1.debito(30000,cliente1);
+
+    //5. Imprima por pantalla los valores de la cuenta y verifique que el balance sea correcto.
+
+        cliente1.mostrarCuenta(cliente1);
 
 
-
+    }
 }
