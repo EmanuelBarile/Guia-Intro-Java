@@ -2,6 +2,8 @@ package com.company;
 
 import com.company.CuentaBanco;
 
+import java.util.Scanner;
+
 public class Main{
 
     public static void main(String[] args) {
@@ -73,7 +75,7 @@ public class Main{
 
     //*****************************************************************************
 
-    //1. Inicialice una cuenta con un monto inicial de 15000.
+    /*//1. Inicialice una cuenta con un monto inicial de 15000.
 
         CuentaBanco cliente1 = new CuentaBanco(001,"Raul","Rosales",15000);
 
@@ -91,7 +93,60 @@ public class Main{
 
     //5. Imprima por pantalla los valores de la cuenta y verifique que el balance sea correcto.
 
-        cliente1.mostrarCuenta(cliente1);
+        cliente1.mostrarCuenta(cliente1);*/
+
+    //********************************************************************************
+
+    //1. Un método que imprima la hora bajo el siguiente formato hh:mm:ss  usando zero a la izquierda ejemplo 13:04:22 .
+
+        public static void cargarHora (){
+
+            Scanner entrada= new Scanner(System.in);
+
+            System.out.println("Vamos a cargar el tiempo! \n Ingrese la hora");
+            int hora= entrada.nextInt();
+            System.out.println("Ingrese los minutos");
+            int minutos= entrada.nextInt();
+            System.out.println("Ingrese los segundos");
+            int segundos= entrada.nextInt();
+
+            entrada.close();
+
+
+        }
+
+        public static int  verificarHora(int hora, int minutos, int segundos){
+
+            int flag=0;
+
+            if (hora<=23 && minuto <=59 && segundo <= 59){
+                System.out.println("Valores ingresados correctamente");
+            }
+
+            else {
+                System.out.println("Valores ingresados incorrectamente");
+                flag=1;
+
+            }
+            return flag;
+
+
+        }
+
+        cargarHora;
+
+
+
+
+        Hora hora1 =new Hora();
+
+
+
+
+
+        //Hora hora1 = ;
+
+        //hora1.mostrarTiempo(hora1);
 
 
     }
