@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.CuentaBanco;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Main{
@@ -99,55 +100,65 @@ public class Main{
 
     //1. Un método que imprima la hora bajo el siguiente formato hh:mm:ss  usando zero a la izquierda ejemplo 13:04:22 .
 
-        public static void cargarHora (){
-
             Scanner entrada= new Scanner(System.in);
+            JOptionPane.showMessageDialog(null,"Vamos a cargar la hora!");
+            int flag=0;
+            int hora=0;
+            int minutos=0;
+            int segundos=0;
 
-            System.out.println("Vamos a cargar el tiempo! \n Ingrese la hora");
-            int hora= entrada.nextInt();
-            System.out.println("Ingrese los minutos");
-            int minutos= entrada.nextInt();
-            System.out.println("Ingrese los segundos");
-            int segundos= entrada.nextInt();
+            do{
+                hora= Integer.parseInt(JOptionPane.showInputDialog("ingrese la hora")); //hora= entrada.nextInt();
+                if (hora>23 || hora<0){
+                    JOptionPane.showMessageDialog(null,"La hora ingresada no es valida, ingresela nuevamente");
+                    flag=1;
+                }
+                else{
+                    flag=0;
+                }
+
+            }while(flag==1);
+
+            do{
+                minutos= Integer.parseInt(JOptionPane.showInputDialog("ingrese los minutos"));
+                if (minutos>59 || minutos<0){
+                    JOptionPane.showMessageDialog(null,"Los minutos ingresados no son validos, ingreselos nuevamente");
+                    flag=1;
+                }
+                else{
+                    flag=0;
+                }
+
+            }while(flag==1);
+
+            do{
+                segundos= Integer.parseInt(JOptionPane.showInputDialog("ingrese los segundos"));
+                if (segundos>59 || segundos<0){
+                    JOptionPane.showMessageDialog(null,"Los segundos ingresados no son validos, ingreselos nuevamente");
+                    flag=1;
+                }
+                else{
+                    flag=0;
+                }
+
+            }while(flag==1);
 
             entrada.close();
 
+            Hora hora1 =new Hora(hora,minutos,segundos);
+            //JOptionPane.showMessageDialog(null,""); // buscar como mostrar la hora con ventana emergente
+            hora1.mostrarTiempo(hora1);
+            System.out.println("\n");
 
-        }
+            //2. Un método que avance en 1 segundo y devuelva la instancia del objeto.
 
-        public static int  verificarHora(int hora, int minutos, int segundos){
+           /* hora1.avanzarUnSegundo(hora1);
+            hora1.mostrarTiempo(hora1);*/
 
-            int flag=0;
+            //3. Un método que retroceda en 1 segundo y devuelva la instancia del objeto.
 
-            if (hora<=23 && minuto <=59 && segundo <= 59){
-                System.out.println("Valores ingresados correctamente");
-            }
-
-            else {
-                System.out.println("Valores ingresados incorrectamente");
-                flag=1;
-
-            }
-            return flag;
-
-
-        }
-
-        cargarHora;
-
-
-
-
-        Hora hora1 =new Hora();
-
-
-
-
-
-        //Hora hora1 = ;
-
-        //hora1.mostrarTiempo(hora1);
-
+            hora1.retrocederUnSegundo(hora1);
+            hora1.mostrarTiempo(hora1);
 
     }
 }

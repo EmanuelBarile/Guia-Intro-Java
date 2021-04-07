@@ -24,6 +24,20 @@ public class Hora {
 
 //Métodos
 
+
+    public int getHora() {
+        return hora;
+    }
+
+    public int getMinuto() {
+        return minuto;
+    }
+
+    public int getSegundo() {
+        return segundo;
+    }
+
+
     public void  mostrarTiempo (Hora tiempo){
 
         if (tiempo.hora<10)
@@ -43,9 +57,53 @@ public class Hora {
 
     }
 
+    public Hora avanzarUnSegundo(Hora hora){
 
+        if(hora.hora==23 && hora.minuto==59 && hora.segundo==59){
+            this.hora=0;
+            this.minuto=0;
+            this.segundo=0;
+        }
+        else if(hora.minuto==59 && hora.segundo==59){
+            this.hora++;
+            this.minuto=0;
+            this.segundo=0;
+        }
+        else if(hora.segundo==59){
+            this.minuto++;
+            this.segundo=0;
+        }
+        else {
+            this.segundo++;
+        }
 
+        return hora;
 
+    }
+
+    public Hora retrocederUnSegundo(Hora hora){
+
+        if(hora.hora==0 && hora.minuto==0 && hora.segundo==0){
+            this.hora=23;
+            this.minuto=59;
+            this.segundo=59;
+        }
+        else if(hora.minuto==0 && hora.segundo==0){
+            this.hora--;
+            this.minuto=59;
+            this.segundo=59;
+        }
+        else if(hora.segundo==0){
+            this.minuto--;
+            this.segundo=59;
+        }
+        else {
+            this.segundo--;
+        }
+
+        return hora;
+
+    }
 
 }
 
